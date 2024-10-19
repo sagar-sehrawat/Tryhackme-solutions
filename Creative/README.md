@@ -34,11 +34,12 @@ After visiting port 1337, I gained access to the Linux file system. I found the 
 The SSH key was password-protected. I used John the Ripper to crack the password and successfully logged in as the `saad` user.
 
 ![John Cracking](https://github.com/sagar-sehrawat/Tryhackme-solutions/blob/main/Creative/img/img7.png)
+![Password Discovery](https://github.com/sagar-sehrawat/Tryhackme-solutions/blob/main/Creative/img/img8.png)
 
 ### 8. Bash History & Password Discovery
 Basic enumeration revealed the password for `saad` in the bash history.
 
-![Password Discovery](https://github.com/sagar-sehrawat/Tryhackme-solutions/blob/main/Creative/img/img8.png)
+
 
 ### 9. Sudo Privileges & LD_PRELOAD
 I checked the sudo privileges using `sudo -l` and found that `saad` could run `ping` with no password. More importantly, the output mentioned `LD_PRELOAD`, a powerful technique for privilege escalation.
