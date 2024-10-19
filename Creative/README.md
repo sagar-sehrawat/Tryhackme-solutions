@@ -39,24 +39,23 @@ The SSH key was password-protected. I used John the Ripper to crack the password
 ### 8. Bash History & Password Discovery
 Basic enumeration revealed the password for `saad` in the bash history.
 
-
+![LD_PRELOAD Sudo Privileges](https://github.com/sagar-sehrawat/Tryhackme-solutions/blob/main/Creative/img/img9.png)
 
 ### 9. Sudo Privileges & LD_PRELOAD
 I checked the sudo privileges using `sudo -l` and found that `saad` could run `ping` with no password. More importantly, the output mentioned `LD_PRELOAD`, a powerful technique for privilege escalation.
 
 LD_PRELOAD is an environment variable used to load shared libraries before a program starts. This can be exploited for privilege escalation.
 
-![LD_PRELOAD Sudo Privileges](https://github.com/sagar-sehrawat/Tryhackme-solutions/blob/main/Creative/img/img9.png)
+![LD_PRELOAD Code Execution](https://github.com/sagar-sehrawat/Tryhackme-solutions/blob/main/Creative/img/img10.png)
 
 ### 10. Exploiting LD_PRELOAD
 After some research, I found a useful article on LD_PRELOAD exploitation [here](https://www.hackingarticles.in/linux-privilege-escalation-using-ld_preload/). Following the article, I compiled the provided C code, uploaded it to the machine, and executed it.
 
-![LD_PRELOAD Code Execution](https://github.com/sagar-sehrawat/Tryhackme-solutions/blob/main/Creative/img/img10.png)
+![Root Shell](https://github.com/sagar-sehrawat/Tryhackme-solutions/blob/main/Creative/img/img11.png)
 
 ### 11. Root Shell
 Despite some warnings, I successfully gained a root shell!
 
-![Root Shell](https://github.com/sagar-sehrawat/Tryhackme-solutions/blob/main/Creative/img/img11.png)
 ![Final Victory](https://github.com/sagar-sehrawat/Tryhackme-solutions/blob/main/Creative/img/img12.png)
 
 
