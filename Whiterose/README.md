@@ -44,7 +44,7 @@ After researching vulnerabilities in EJS, I discovered an RCE exploit. Modifying
 ### Sudo Permissions
 Running `sudo -l` revealed the following:
 User can run admin.cyprusbank.thm with sudoedit
-1[sudo](https://github.com/sagar-sehrawat/Tryhackme-solutions/blob/main/Whiterose/img/img7.png)
+![sudo](https://github.com/sagar-sehrawat/Tryhackme-solutions/blob/main/Whiterose/img/img7.png)
 
 ### Exploitation
 I searched for privilege escalation vectors and identified **CVE-2023-22809**. This vulnerability allowed me to edit `/etc/sudoers`.
